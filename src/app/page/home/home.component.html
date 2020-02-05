@@ -1,4 +1,10 @@
-<app-nav-bar (search)="onSearch($event)" (click)="onClick($event)"></app-nav-bar>
+<!--<app-nav-bar (search)="onSearch($event)" (click)="onClick($event)"></app-nav-bar>
 <h1>Hello there. ANGULAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
 <app-search-result [keywords]="keywords"></app-search-result>
-<app-click-button-result [text]="text"></app-click-button-result>
+<app-click-button-result [text]="text"></app-click-button-result>-->
+
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let products of dataService.fetch()">{{products.name}}
+    <button mat-button style="margin-left: 3%" (click)="getDetails(products.id)">Click here!</button>
+  </mat-list-item>
+</mat-list>

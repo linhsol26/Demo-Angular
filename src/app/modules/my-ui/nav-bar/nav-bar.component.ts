@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Event } from '@angular/router';
+import { Event, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +8,7 @@ import { Event } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
   @Output()
   search: EventEmitter<string> = new EventEmitter();
   click: EventEmitter<Event> = new EventEmitter();

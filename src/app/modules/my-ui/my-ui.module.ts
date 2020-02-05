@@ -9,6 +9,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { ClickButtonResultComponent } from './click-button-result/click-button-result.component';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ClickButtonResultComponent } from './click-button-result/click-button-r
     MatInputModule,
     MatIconModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   exports: [
     NavBarComponent,

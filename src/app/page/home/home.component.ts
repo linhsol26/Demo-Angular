@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from 'src/app/services/data-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   text = '';
-  constructor() { }
+  constructor(public dataService: DataServiceService, public router: Router) { }
   a = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   keywords = '';
   onClick(event) {
@@ -19,4 +21,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  getDetails(id) {
+    this.router.navigate(['/product/' + id]);
+  }
 }
