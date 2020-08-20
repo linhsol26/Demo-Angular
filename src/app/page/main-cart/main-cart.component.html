@@ -1,0 +1,8 @@
+<mat-list>
+<mat-list-item *ngFor="let prods of dataService.cart">
+  <h2>{{dataService.query(prods.id)[0].name}}</h2>
+  <h3>{{dataService.query(prods.id)[0].price}}</h3>
+  <h3>Quantity: {{prods.quantity}}</h3>
+</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
